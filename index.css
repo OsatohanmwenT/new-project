@@ -1,0 +1,103 @@
+:root{
+--Cyan: hsl(179, 62%, 43%);
+--Bright-Yellow: hsl(71, 73%, 54%);
+--Light-Gray: hsl(204, 43%, 93%);
+--Grayish-Blue: hsl(218, 22%, 67%);
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+   height: 100vh;
+   max-width: 1440px;
+   margin: 0;
+   font-family: 'Karla', sans-serif;
+   background-color: var(--Light-Gray);
+}
+.wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 60px;
+}
+.wrapper .container{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+}
+.container .box{
+    background-color: white;
+    padding: 20px 20px;
+    max-width: 655px;
+}
+.container .box.one{
+    border-radius: 5px 5px 0px 0px;
+}
+.container .box.one h2{
+   color: var(--Cyan);
+   font-size: 1.2rem;
+   margin-top: 5px;
+}
+.container .box.one h3{
+   color: var(--Bright-Yellow);
+   font-size: 1rem;
+}
+.container .box.one p{
+   color: var(--Grayish-Blue);
+   font-size: 0.9rem;
+   line-height: 25px;
+}
+.container .box.two{
+    background-color: var(--Cyan);
+    color: var(--Light-Gray);
+    display: flex;
+    flex-direction: column;
+}
+.container .box.two h2{
+    margin-top: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.container .box.two .price{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.container .box.two .price span{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.container .box.two button{
+    background-color: var(--Bright-Yellow);
+    border: none;
+    margin-top: 15px;
+    position: relative;
+    padding: 15px 100px;
+    align-self: center;
+    border-radius: 5px;
+    box-shadow: 1px 9px 11px 3px rgb(8 8 8 / 14%);
+    color: var(--Light-Gray);
+}
+.container .box.three{
+    background-color:rgba(79, 196, 194, 0.829);
+    color: var(--Light-Gray);
+    border-radius: 0px 0px 5px 5px;
+}
+.container .box.box.three h2{
+    font-size: 1.2rem;
+}
+.container .box.box.three p{
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 25px;
+}
+@media (min-width:600px) {
+    .wrapper .container{
+     grid-template-rows: repeat(2,1fr);
+     grid-template-columns: 1fr 1fr;
+    }
+    .container .box.one{
+        grid-column: span 2;
+    }
+}
